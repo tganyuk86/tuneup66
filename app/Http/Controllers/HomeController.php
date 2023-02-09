@@ -54,16 +54,14 @@ class HomeController extends Controller
 
 
 
-        $new = Main::create($upd);
+        $data = Main::create($upd);
 
-        $mailData = [
-            'title' => 'Mail from ItSolutionStuff.com',
-            'body' => 'This is for testing email using smtp.'
-        ];
+        $data->addCalcs();
+        $data['displayRows'] = $data->cols()['display'];
 
-        Mail::to($request["email"])->send(new Summary($mailData));
+        Mail::to($request["email"])->send(new Summary($data));
 
-        return response()->json(['status' => 'success', 'id' => $new->id]);
+        return response()->json(['status' => 'success', 'id' => $data->id]);
 
     }
 
