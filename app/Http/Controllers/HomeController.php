@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Summary;
 use App\Models\Main;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -60,7 +61,7 @@ class HomeController extends Controller
             'body' => 'This is for testing email using smtp.'
         ];
 
-        Mail::to($request["email"])->send(new DemoMail($mailData));
+        Mail::to($request["email"])->send(new Summary($mailData));
 
         return response()->json(['status' => 'success', 'id' => $new->id]);
 
