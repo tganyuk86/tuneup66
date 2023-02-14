@@ -14,6 +14,8 @@ class Summary extends Mailable
     use Queueable, SerializesModels;
 
     public $mailData;
+    public $firstName;
+    public $displayRows;
     /**
      * Create a new message instance.
      *
@@ -22,6 +24,8 @@ class Summary extends Mailable
     public function __construct($data)
     {
         $this->mailData = $data;
+        $this->firstName = $data['firstName'];
+        $this->displayRows = $data['displayRows'];
     }
 
     /**

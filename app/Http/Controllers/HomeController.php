@@ -50,16 +50,18 @@ class HomeController extends Controller
             "firstName" => $request["firstName"]??0,
             "lastName" => $request["lastName"]??0,
             "email" => $request["email"]??0,
+            "carID" => $request["carID"]??0,
+            "targetEconomy" => $request["targetEconomy"]??0,
         ];
 
 
 
         $data = Main::create($upd);
 
-        $data->addCalcs();
-        $data['displayRows'] = $data->cols()['display'];
-
-        Mail::to($request["email"])->send(new Summary($data));
+//        $data->addCalcs();
+//        $data['displayRows'] = $data->cols()['display'];
+//        $data->formatCols();
+//        Mail::to($request["email"])->send(new Summary($data));
 
         return response()->json(['status' => 'success', 'id' => $data->id]);
 
@@ -68,6 +70,7 @@ class HomeController extends Controller
     public function sendTestMail($id){
         $data = Main::find($id);
         $data->addCalcs();
+        $data->formatCols();
         $data['displayRows'] = $data->cols()['display'];
 
         return view('mail.summary', $data);

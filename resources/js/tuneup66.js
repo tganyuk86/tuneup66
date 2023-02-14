@@ -2,6 +2,8 @@ let currentStep = false
 let theyKnow = false
 let year = false
 let make = false
+let model = false
+let trim = false
 
 export function start() {
     console.log('Starting!')
@@ -11,7 +13,7 @@ export function start() {
     $('.prev').on('click', prevStep)
     $('.next').on('click', nextStep)
 
-    $('.carMakeContainer, .carModelContainer').hide();
+    $('.carMakeContainer, .carModelContainer, .carTrimContainer').hide();
 
 
     $('.step1_choice').on('click', function (){
@@ -34,12 +36,26 @@ export function start() {
     $('.carYear').on('change', function (){
         year = $(this).val()
         loadCarMake()
+        trim = false
         $('.carMakeContainer').show()
     })
     $('.carMake').on('change', function (){
         make = $(this).val()
         $('.carModelContainer').show()
+        trim = false
         loadCarModels()
+    })
+    $('.carModel').on('change', function (){
+        $('.carTrimContainer').show()
+        model = $(this).val()
+        loadCarTrim()
+        trim = false
+    })
+    $('.carTrim').on('change', function (){
+        trim = $(this).val()
+        $('#carID').val(trim)
+        console.log(trim)
+        loadCarMPG()
     })
 
     $('.proceed').on('click', function (){
@@ -52,6 +68,10 @@ export function start() {
             save()
             showStep('end')
         }
+    })
+    $('.preview').on('click', function (){
+        if($(this).data('id') > 0)
+        window.open('/testMail/'+$(this).data('id'))
     })
 
 }
@@ -73,6 +93,7 @@ function save(){
         data: x
     }).then(data => {
         console.log(data)
+        $('.preview').data('id', data.id)
     })
 }
 
@@ -80,7 +101,7 @@ function validateStep(){
     let out = true
     clearInvalid()
     if(currentStep === 4){
-        if(!theyKnow) {
+        if(theyKnow) {
             let o = $('#m12')
             if (o.val() === '') {
                 out = false
@@ -116,8 +137,7 @@ function validateStep(){
         }
     }
     if(currentStep === 6) {
-        let o = $('.carModel')
-        if (o.val() === '0') {
+        if (!trim) {
             out = false
             alert('Please select your vehicle')
         }
@@ -196,6 +216,17 @@ function hideSteps() {
 }
 
 
+function loadMPG(id){
+    const jsonSource = 'https://www.fueleconomy.gov/ws/rest/vehicle/'+id;
+    $.ajax({
+        url: jsonSource,
+        dataType: 'json'
+    }).then(data => {
+        $('#targetEconomy').val(data.UHighway)
+        console.log(data, data.UHighway)
+    });
+}
+
 function loadList(url, target){
     const jsonSource = 'https://www.fueleconomy.gov/ws/rest/vehicle/menu/'+url;
     $(target).html('<option value="0">Make A Selection</option>')
@@ -220,4 +251,12 @@ function loadCarModels(){
 
 function loadCarMake(){
     loadList( 'make?year='+year,'.carMake')
+}
+
+function loadCarTrim(){
+    loadList( 'options?year='+year+'&make='+make+'&model='+model,'.carTrim')
+}
+
+function loadCarMPG(){
+    loadMPG( trim)
 }

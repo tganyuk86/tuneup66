@@ -29,6 +29,7 @@
                 <div class="card-footer">
                     <button class="prev" >Previous</button>
                     <button class="next" >Next</button>
+                    <button class="preview" data-id="0">Preview</button>
                 </div>
             @endif
         </div>

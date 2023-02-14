@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string("carYear");
             $table->string("carMake");
             $table->string("carModel");
+            $table->string("carID");
+            $table->string("targetEconomy");
             $table->string("firstName");
             $table->string("lastName");
             $table->string("email");

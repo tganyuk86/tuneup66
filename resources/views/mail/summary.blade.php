@@ -1,20 +1,24 @@
 <x-guest-layout>
-
-
     <p>Dear {{$firstName}},</p>
-
-
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-
-    <div class="container">
+    <p>
+        Thank you for using the TuneUp 66 Fuel Savings Calculator.
+    </p>
+    <p>
+        Your projected savings by using Engine Armour Tech, based on your automobiles make, model, and year are highlighted below!
+    </p>
+    <p>
+        It’s easy to see how one container of Engine Armour Tech in your car provides true measurable savings that more than make up the cost of the treatment
+    </p>
+    <p>
+        Click the Buy Now button below to purchase Engine Armour Tech for your car.  While you are at it, purchase a few bottles for your other vehicles as well.  The more you buy, the more you save!
+    </p>
+    <table class="">
         @foreach($displayRows as $key => $title)
-        <div class="row">
-            <div class="col-8">{{$title}}</div>
-            <div class="col">{{$$key}}</div>
-        </div>
+        <tr class="">
+            <td class="border border-gray pe-5">{{$title}}</td>
+            <td class="border border-gray text-end ps-5">{{$$key??$mailData[$key]}}</td>
+        </tr>
         @endforeach
-    </div>
+    </table>
 
 </x-guest-layout>
