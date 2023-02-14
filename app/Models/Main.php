@@ -79,6 +79,9 @@ class Main extends Authenticatable
                 "distance" => 'Distance',
             ],
             "display" => [
+                'savingsPercent' => 'Projected Saving %',
+                'savingsMonthly' => 'Projected Overall Savings Per Month',
+                'savingsYearly' => 'Projected Overall Savings Per Year',
                 "measurement" => 'Measurement:',
                 "carMake" => 'Vehicle  Make',
                 "carModel" => 'Vehicle  Model',
@@ -90,9 +93,6 @@ class Main extends Authenticatable
                 "fuelPrice" => 'Current Fuel Price',
 
                 'targetEconomy' => 'Target Fuel Economy',
-                'savingsPercent' => 'Projected Saving %',
-                'savingsMonthly' => 'Projected Overall Savings Per Month',
-                'savingsYearly' => 'Projected Overall Savings Per Year',
                 'payback' => 'Months to Payback from TuneUp66',
             ],
 
