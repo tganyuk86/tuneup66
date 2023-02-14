@@ -21,13 +21,13 @@ export function start() {
         if(v === 1){
             theyKnow = true
             showStep(4)
-            $('.theyKnow').hide()
-            $('.theyDontKnow').show()
+            $('.theyKnow').show()
+            $('.theyDontKnow').hide()
         }else{
             theyKnow = false
             showStep(2)
-            $('.theyKnow').show()
-            $('.theyDontKnow').hide()
+            $('.theyKnow').hide()
+            $('.theyDontKnow').show()
         }
     })
 

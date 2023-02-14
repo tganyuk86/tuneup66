@@ -43,17 +43,17 @@
                 <label for="m1">I use KM, Litres and L/100KM</label>
             </div>
 
-            <div class=theyDontKnow"">
+            <div class=theyKnow"">
                 <label for="m12">I currently get:</label>
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""></div>
             </div>
 
 
-            <div class="theyKnow">
+            <div class="theyDontKnow">
                 <label for="m3">Enter the volume of Fuel you used (reading from the pump)</label>
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="volumeUsed" id="m3" value=""></div>
             </div>
-            <div class="theyKnow">
+            <div class="theyDontKnow">
                 <label for="m4">Enter the Distance from your Odometer</label>
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="distance" id="m4" value=""></div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="monthlyDistance" id="m6" value=""></div>
             </div>
             <div class="">
-                <label for="m7">What is your price for Fuel (Gas)</label>
+                <label for="m7">What is your price for Fuel (Gas) $X.XX for example $3.75</label>
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="fuelPrice" id="m7" value=""></div>
             </div>
         </div>

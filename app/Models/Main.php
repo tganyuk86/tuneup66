@@ -31,7 +31,11 @@ class Main extends Authenticatable
 
     public function addCalcs(){
         if($this->volumeUsed && $this->distance){
-            $this->mileage = $this->distance / $this->volumeUsed;
+            if($this->measurement === 'liters') {
+                $this->mileage = $this->volumeUsed / $this->distance * 100;
+            }else{
+                $this->mileage = $this->distance / $this->volumeUsed;
+            }
         }
         $this->initialEconomy = $this->mileage;
         if($this->measurement === 'liters') {
