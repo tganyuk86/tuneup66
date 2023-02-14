@@ -47,7 +47,8 @@ class Main extends Authenticatable
         }
         $this->savingsMonthly = $this->monthlyFuelSpending * $this->savingsPercent;
         $this->savingsYearly = $this->savingsMonthly * 12;
-        $this->payback = '';
+        $this->payback = 35/$this->savingsMonthly;
+        //price: $35
     }
 
     public function formatCols(){
@@ -63,6 +64,7 @@ class Main extends Authenticatable
         $this->savingsPercent = number_format($this->savingsPercent*100,2).'%';
         $this->savingsMonthly = '$'.number_format($this->savingsMonthly,2);
         $this->savingsYearly = '$'.number_format($this->savingsYearly,2);
+        $this->payback = '$'.number_format($this->payback,2);
         $this->measurement = $this->measurement === 'miles' ? 'Imperial/USA' : 'Metric';
     }
 
