@@ -15,8 +15,8 @@
     <table class="table table-striped w-50">
         @foreach($displayRows as $key => $title)
         <tr class="">
-            <td class="border border-gray pe-5 @if($key === 'savingsYearly') font-bold @endif">{{$title}}</td>
-            <td class="border border-gray text-end ps-5">{{$$key??$mailData[$key]}}</td>
+            <td class="border border-gray {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$title}}</td>
+            <td class="border border-gray text-end {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$$key??$mailData[$key]}}</td>
         </tr>
         @endforeach
     </table>

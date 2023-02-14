@@ -46,7 +46,11 @@ class Main extends Authenticatable
 
         }
         if($this->monthlyFuelSpending === "0"){
-            $x = $this->mileage / 100 * $this->monthlyDistance;
+            if($this->measurement === 'liters') {
+                $x = $this->mileage / 100 * $this->monthlyDistance;
+            }else{
+                $x =  $this->monthlyDistance / $this->mileage;
+            }
             $this->monthlyFuelSpending = $x * $this->fuelPrice;
         }
         $this->savingsMonthly = $this->monthlyFuelSpending * $this->savingsPercent;
@@ -56,7 +60,7 @@ class Main extends Authenticatable
     }
 
     public function formatCols(){
-        $msr = $this->measurement === 'miles' ? ' MPG' : ' L/100km';
+        $msr = $this->measurement === 'miles' ? 'MPG' : 'L/100km';
         $msr2 = $this->measurement === 'miles' ? 'Miles' : 'KM';
         $msr3 = $this->measurement === 'miles' ? 'Gl' : 'L';
 
