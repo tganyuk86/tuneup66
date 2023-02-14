@@ -57,7 +57,7 @@ class Main extends Authenticatable
         $this->distance = number_format($this->distance,0).$msr2;
         $this->initialEconomy = number_format($this->initialEconomy,2).$msr;
         $this->targetEconomy = number_format($this->targetEconomy,2).$msr;
-        $this->savingsPercent = number_format($this->savingsPercent,2).'%';
+        $this->savingsPercent = number_format($this->savingsPercent*100,2).'%';
         $this->savingsMonthly = '$'.number_format($this->savingsMonthly,2);
         $this->savingsYearly = '$'.number_format($this->savingsYearly,2);
         $this->measurement = $this->measurement === 'miles' ? 'Imperial/USA' : 'Metric';
