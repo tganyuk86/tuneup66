@@ -35,7 +35,7 @@ class Main extends Authenticatable
         }
         $this->initialEconomy = $this->mileage;
         if($this->measurement === 'liters') {
-            $this->targetEconomy = $this->targetEconomy * 1.609344 / 3.78541178;
+            $this->targetEconomy = 235.215 / $this->targetEconomy;// * 1.609344 / 3.78541178;
         }
         $this->savingsPercent = (1 - ($this->targetEconomy / $this->initialEconomy ));
         if($this->monthlyFuelSpending === "0"){
