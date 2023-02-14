@@ -222,8 +222,8 @@ function loadMPG(id){
         url: jsonSource,
         dataType: 'json'
     }).then(data => {
-        $('#targetEconomy').val(data.UHighway)
-        console.log(data, data.UHighway)
+        $('#targetEconomy').val(data.comb08)
+        console.log(data, data.comb08)
     });
 }
 
