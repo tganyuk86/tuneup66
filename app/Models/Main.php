@@ -40,7 +40,7 @@ class Main extends Authenticatable
         $this->initialEconomy = $this->mileage;
         if($this->measurement === 'liters') {
             $this->targetEconomy = 235.215 / $this->targetEconomy;// * 1.609344 / 3.78541178;
-            $this->savingsPercent = (1 - ($this->targetEconomy / $this->initialEconomy ));
+            $this->savingsPercent = (($this->initialEconomy - $this->targetEconomy) / $this->targetEconomy );
         }else{
             $this->savingsPercent = ( ($this->targetEconomy - $this->initialEconomy ) /  $this->initialEconomy);
 
@@ -60,16 +60,19 @@ class Main extends Authenticatable
     }
 
     public function formatCols(){
-        $msr = $this->measurement === 'miles' ? 'MPG' : 'L/100km';
+        $msr = $this->measurement === 'miles' ? ' MPG' : 'L/100km';
         $msr2 = $this->measurement === 'miles' ? 'Miles' : 'KM';
         $msr3 = $this->measurement === 'miles' ? 'Gl' : 'L';
 
         $this->monthlyFuelSpending = '$'.number_format($this->monthlyFuelSpending);
-        $this->fuelPrice = '$'.number_format($this->fuelPrice,2).'/'.$msr3;
+        if($this->fuelPrice === 0)
+            $this->fuelPrice = 'N/A';
+        else
+            $this->fuelPrice = '$'.number_format($this->fuelPrice,2).'/'.$msr3;
         $this->distance = number_format($this->distance,0).$msr2;
         $this->initialEconomy = number_format($this->initialEconomy,2).$msr;
         $this->targetEconomy = number_format($this->targetEconomy,2).$msr;
-        $this->savingsPercent = number_format($this->savingsPercent*100,2).'%';
+        $this->savingsPercent = number_format($this->savingsPercent*100,0).'%';
         $this->savingsMonthly = '$'.number_format($this->savingsMonthly,2);
         $this->savingsYearly = '$'.number_format($this->savingsYearly,2);
         $this->payback = number_format($this->payback,2);
