@@ -7,8 +7,10 @@ let trim = false
 
 export function start() {
     console.log('Starting!')
-    currentStep = 1
-    showStep(1)
+    currentStep = 0
+    showStep(0)
+    $('.theyDontKnow').hide()
+    $('.theyKnow').hide()
 
     $('.prev').on('click', prevStep)
     $('.next').on('click', nextStep)
@@ -16,17 +18,19 @@ export function start() {
     $('.carMakeContainer, .carModelContainer, .carTrimContainer').hide();
 
 
+    $('.step0_choice').on('click', function (){
+        showStep(1)
+    })
+
     $('.step1_choice').on('click', function (){
         let v = $(this).data('value')
         if(v === 1){
             theyKnow = true
             showStep(4)
             $('.theyKnow').show()
-            $('.theyDontKnow').hide()
         }else{
             theyKnow = false
             showStep(2)
-            $('.theyKnow').hide()
             $('.theyDontKnow').show()
         }
     })

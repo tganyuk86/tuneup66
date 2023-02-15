@@ -1,5 +1,25 @@
 <x-guest-layout>
 
+    <div class="step" data-step="0">
+        <div class="vstack gap-4">
+            <div>Welcome to the Tuneup66 Fuel Saving Calculator</div>
+            <p>The TuneUp 66 website provides all kinds of scientific data and case studies to support the effectiveness of Engine Armour Tech.</p>
+
+            <p>Don't just take our word for it!</p>
+
+        <p>We developed the Fuel Savings Calculator so that you can input your own vehicles specifications and provide you with a simple output that demonstrates the projected cost savings by month and by year.</p>
+
+        <p>This output alone, will validate the small expense in utilizing Engine Armour Tech for all of your vehicles.</p>
+
+        <p>What the fuel savings calculator cannot do, is to demonstrate the increase in performance and reduction in engine wear that you will enjoy as well.  If you haven't already, please read the testimonials on the site located at https://tuneup66.com/#testimonials.</p>
+
+        <p>All you have to do is follow the prompts and answer the questions.  The entire experience will take 5 minutes.Let's Get Started!</p>
+
+            <div class="text-center">
+                <div class="btn btn-info step0_choice text-white ms-auto" >Click Here To Get Started</div>
+            </div>
+        </div>
+    </div>
     <div class="step" data-step="1">
         <div class="vstack gap-4">
             <div>Welcome to the Tuneup66 Fuel Saving Calculator</div>
@@ -43,7 +63,7 @@
                 <label for="m1">I use KM, Litres and L/100KM</label>
             </div>
 
-            <div class=theyKnow"">
+            <div class="theyKnow">
                 <label for="m12">I currently get:</label>
                 <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""></div>
             </div>
