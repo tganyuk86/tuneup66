@@ -16,7 +16,7 @@
         @foreach($displayRows as $key => $title)
         <tr class="">
             <td class="border border-gray {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$title}}</td>
-            <td class="border border-gray text-end {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$$key??$mailData[$key]}}</td>
+            <td class="border border-gray text-end {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$$key??$mailData[$key]??0}}</td>
         </tr>
         @endforeach
     </table>
