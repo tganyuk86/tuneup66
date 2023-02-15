@@ -201,7 +201,7 @@ function prevStep() {
 function showStep(num) {
     hideSteps()
     currentStep = num
-    let lastStep = $('.step').length-1
+    let lastStep = $('.step').length-2
 
     $('[data-step="' + num + '"]').show()
     if(num === 'end')
