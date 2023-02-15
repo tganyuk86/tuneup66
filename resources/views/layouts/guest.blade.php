@@ -13,7 +13,7 @@
         <!-- Scripts -->
         @vite(['resources/js/app.js'])
     </head>
-    <body class="m-5 p-5">
+    <body class="">
         <div class="card">
             <div class="card-header">
                 <div  class="hstack gap-2">
