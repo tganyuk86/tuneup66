@@ -58,10 +58,10 @@ class HomeController extends Controller
 
         $data = Main::create($upd);
 
-//        $data->addCalcs();
-//        $data['displayRows'] = $data->cols()['display'];
-//        $data->formatCols();
-//        Mail::to($request["email"])->send(new Summary($data));
+        $data->addCalcs();
+        $data['displayRows'] = $data->cols()['display'];
+        $data->formatCols();
+        Mail::to($request["email"])->send(new Summary($data));
 
         return response()->json(['status' => 'success', 'id' => $data->id]);
 
