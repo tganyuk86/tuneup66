@@ -55,7 +55,7 @@ class Main extends Authenticatable
         }
         $this->savingsMonthly = $this->monthlyFuelSpending * $this->savingsPercent;
         $this->savingsYearly = $this->savingsMonthly * 12;
-        $this->payback = 35/$this->savingsMonthly;
+        $this->payback = $this->savingsMonthly > 0 ? 35/$this->savingsMonthly : 0;
         //price: $35
     }
 

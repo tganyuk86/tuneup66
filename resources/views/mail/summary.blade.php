@@ -12,7 +12,7 @@
     <p>
         Click the Buy Now button below to purchase Engine Armour Tech for your car.  While you are at it, purchase a few bottles for your other vehicles as well.  The more you buy, the more you save!
     </p>
-    <table class="table table-striped w-50">
+    <table class="table table-striped w-50" style="">
         @foreach($displayRows as $key => $title)
         <tr class="">
             <td class="border border-gray {{$key === 'savingsYearly' ? 'fw-bolder' :''}}">{{$title}}</td>
@@ -20,5 +20,7 @@
         </tr>
         @endforeach
     </table>
+
+
 
 </x-guest-layout>
