@@ -8,7 +8,7 @@ let trim = false
 export function start() {
     console.log('Starting!')
     currentStep = 0
-    // showStep(0)
+    showStep(0)
     $('.theyDontKnow').hide()
     $('.theyKnow').hide()
 
