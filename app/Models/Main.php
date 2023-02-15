@@ -63,7 +63,7 @@ class Main extends Authenticatable
         $msr = $this->measurement === 'miles' ? ' MPG' : 'L/100km';
         $msr2 = $this->measurement === 'miles' ? 'Miles' : 'KM';
         $msr3 = $this->measurement === 'miles' ? 'Gl' : 'L';
-
+        $this->monthlyDistance = $this->monthlyDistance . $msr2;
         $this->monthlyFuelSpending = '$'.number_format($this->monthlyFuelSpending);
         if($this->fuelPrice === 0)
             $this->fuelPrice = 'N/A';
