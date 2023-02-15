@@ -90,12 +90,13 @@ class Main extends Authenticatable
                 'savingsPercent' => 'Projected Saving %',
                 'savingsMonthly' => 'Projected Overall Savings Per Month',
                 'savingsYearly' => 'Projected Overall Savings Per Year',
-                'payback' => 'Months to Payback from TuneUp66',
+                'payback' => 'Months to Payback from TuneUp 66',
 
                 "measurement" => 'Measurement:',
-                "carMake" => 'Vehicle  Make',
-                "carModel" => 'Vehicle  Model',
                 "carYear" => 'Vehicle Year',
+                "carMake" => 'Vehicle Make',
+                "carModel" => 'Vehicle Model',
+                "carTrim" => 'Vehicle Trim',
                 'initialEconomy' => 'Vehicle Initial Fuel Economy:',
 
                 "monthlyFuelSpending" => 'Monthly Fuel Spend',

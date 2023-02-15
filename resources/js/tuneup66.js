@@ -8,7 +8,7 @@ let trim = false
 export function start() {
     console.log('Starting!')
     currentStep = 0
-    showStep(0)
+    // showStep(0)
     $('.theyDontKnow').hide()
     $('.theyKnow').hide()
 
@@ -52,6 +52,7 @@ export function start() {
     $('.carModel').on('change', function (){
         $('.carTrimContainer').show()
         model = $(this).val()
+        console.log(model)
         loadCarTrim()
         trim = false
     })
@@ -76,6 +77,10 @@ export function start() {
     $('.preview').on('click', function (){
         if($(this).data('id') > 0)
         window.open('/testMail/'+$(this).data('id'))
+    })
+
+    $('#m5').on('change', function(){
+        // if($())
     })
 
 }
@@ -238,6 +243,11 @@ function loadList(url, target){
         url: jsonSource,
         dataType: 'json'
     }).then(data => {
+        if(data.menuItem.text){
+            let opt = $('<option>').val(data.menuItem.value).html(data.menuItem.text)
+            $(target).append(opt)
+            return;
+        }
         for(let x of data.menuItem){
             let opt = $('<option>').val(x.value).html(x.text)
             $(target).append(opt)
