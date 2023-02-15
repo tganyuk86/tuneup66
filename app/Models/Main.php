@@ -61,8 +61,8 @@ class Main extends Authenticatable
 
     public function formatCols(){
         $msr = $this->measurement === 'miles' ? ' MPG' : 'L/100km';
-        $msr2 = $this->measurement === 'miles' ? 'Miles' : 'KM';
-        $msr3 = $this->measurement === 'miles' ? 'Gl' : 'L';
+        $msr2 = $this->measurement === 'miles' ? 'Miles' : 'km';
+        $msr3 = $this->measurement === 'miles' ? 'Gal' : 'L';
         $this->monthlyDistance = $this->monthlyDistance . ' '. $msr2;
         $this->monthlyFuelSpending = '$'.number_format($this->monthlyFuelSpending);
         if($this->fuelPrice === 0)
