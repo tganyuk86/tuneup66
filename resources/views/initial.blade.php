@@ -190,7 +190,7 @@
         </div>
     </div>
 
-    
+    <hr>
     <div class="btn btn-lg btn-success back">Back</div>
     <div class="btn btn-lg btn-success proceed">Next</div>
     <div class="btn btn-lg btn-success finish">Finish</div>
