@@ -22,6 +22,7 @@ class Main extends Authenticatable
         "carYear",
         "carMake",
         "carModel",
+        "carTrim",
         "firstName",
         "lastName",
         "email",
