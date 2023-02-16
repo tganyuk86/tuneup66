@@ -9,11 +9,11 @@
 
         <div class="py-0 my-0">We developed the Fuel Savings Calculator so that you can input your own vehicles specifications and provide you with a simple output that demonstrates the projected cost savings by month and by year.</div>
 
-        <div class="py-0 my-0">This output alone, will validate the small expense in utilizing Engine Armour Tech for all of your vehicles.</div>
+        <div class="py-0 my-0">This output alone, will validate the small expense in using Engine Armour Tech for all of your vehicles.</div>
 
             <div class="py-0 my-0">What the fuel savings calculator cannot do, is to demonstrate the increase in performance and reduction in engine wear that you will enjoy as well.  If you haven't already, please read the testimonials on the site located at <a href="https://tuneup66.com/#testimonials">https://tuneup66.com/#testimonials</a>.</div>
 
-        <div class="py-0 my-0">All you have to do is follow the prompts and answer the questions.  The entire experience will take 5 minutes.Let's Get Started!</div>
+        <div class="py-0 my-0">All you have to do is follow the prompts and answer the questions. The entire experience will take 5 minutes. Let's Get Started!</div>
 
             <div class="text-center">
                 <div class="btn btn-success step0_choice text-white ms-auto" >Click Here To Get Started</div>
