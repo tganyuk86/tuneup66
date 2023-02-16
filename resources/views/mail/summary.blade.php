@@ -38,8 +38,8 @@
         </table>
         <hr>
         <a href="https://tuneup66.com/product/engine-armour-tech/">
-        <div><img src="{{env('APP_URL')}}/product.png" style="height: 50%"></div>
-        <div><img src="{{env('APP_URL')}}/buynow.png" style="height: 50%"></div>
+        <div><img src="{{env('APP_URL')}}/product.png" height="400px"></div>
+        <div><img src="{{env('APP_URL')}}/buynow.png" height="200px"></div>
         </a>
     </div>
 </div>

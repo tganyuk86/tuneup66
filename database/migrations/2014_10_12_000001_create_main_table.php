@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string("carYear");
             $table->string("carMake");
             $table->string("carModel");
+            $table->string("carTrim");
             $table->string("carID");
             $table->string("targetEconomy");
             $table->string("firstName");
@@ -42,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('main');
     }
 };
