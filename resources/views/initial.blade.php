@@ -65,17 +65,26 @@
 
             <div class="theyKnow">
                 <label for="m12">I currently get:</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""></div>
+                <div class="input-group">
+                    <input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""  placeholder="0" aria-label="0">
+                    <span class="input-group-text measurementLabel2"></span>
+                </div>
             </div>
 
 
             <div class="theyDontKnow">
                 <label for="m3">Enter the volume of Fuel you used (reading from the pump)</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="volumeUsed" id="m3" value=""></div>
+                <div class="input-group">
+                    <input type="number" class="form-control-lg form-control text-end" name="volumeUsed" id="m4" value=""  placeholder="0" aria-label="0">
+                    <span class="input-group-text measurementLabel3"></span>
+                </div>
             </div>
             <div class="theyDontKnow">
                 <label for="m4">Enter the Distance from your Odometer</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="distance" id="m4" value=""></div>
+                <div class="input-group">
+                    <input type="number" class="form-control-lg form-control text-end" name="distance" id="m4" value=""  placeholder="0" aria-label="0">
+                    <span class="input-group-text measurementLabel"></span>
+                </div>
             </div>
         </div>
     </div>
@@ -84,54 +93,59 @@
 
             <div class="">
                 <label for="m5">What is your monthly Fuel (Gas) spending</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="monthlyFuelSpending" id="m5" value=""></div>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control-lg form-control" name="monthlyFuelSpending" id="m5" value=""  placeholder="0.00" aria-label="0.00">
+                </div>
             </div>
 
             <div class="text-center font-bold fs-3">OR</div>
 
             <div class="">
                 <label for="m6">What is your monthly Distance Driven</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="monthlyDistance" id="m6" value=""></div>
+                <div class="input-group">
+                    <input type="number" class="form-control-lg form-control" name="monthlyDistance" id="m6" value=""  placeholder="123" aria-label="123">
+                    <span class="input-group-text measurementLabel"></span>
+                </div>
             </div>
             <div class="">
-                <label for="m7">What is your price for Fuel (Gas) $X.XX for example $3.75</label>
-                <div class="ms-auto"><input type="number" class="form-control-lg form-control" name="fuelPrice" id="m7" value=""></div>
+                <label for="m7">What is your price for Fuel (Gas)</label>
+                <div class="input-group">
+                    <span class="input-group-text ">$</span>
+                    <input type="number" class="form-control-lg form-control" name="fuelPrice" id="m7" value=""  placeholder="3.75" aria-label="3.75">
+                </div>
             </div>
         </div>
     </div>
     <div class="step" data-step="6">
-        <div class="vstack gap-4">
+        <div class="row">
 
-            <div class="">
+            <div class="col-2">
                 <label>Choose Your Car Year</label>
                 <div class="ms-auto">
-                    <select name="carYear" class="form-select form-select-lg carYear">
-                        <option value="0">Select Car Year</option>
+                    <select name="carYear" class="form-select form-select-lg carYear" size="10">
                     </select>
                 </div>
             </div>
 
-            <div class="carMakeContainer">
+            <div class="carMakeContainer col">
                 <label>Choose Your Car Make</label>
                 <div class="ms-auto">
-                    <select name="carMake" class="form-select form-select-lg carMake">
-                        <option value="0">Select Car Make</option>
+                    <select name="carMake" size="10" class="form-select form-select-lg carMake">
                     </select>
                 </div>
             </div>
-            <div class="carModelContainer">
+            <div class="carModelContainer col">
                 <label>Choose Your Car Model</label>
                 <div class="ms-auto">
-                    <select name="carModel" class="form-select form-select-lg carModel">
-                        <option value="0">Select Car Model</option>
+                    <select name="carModel" size="10" class="form-select form-select-lg carModel">
                     </select>
                 </div>
             </div>
-            <div class="carTrimContainer">
+            <div class="carTrimContainer col">
                 <label>Choose Your Car Trim</label>
                 <div class="ms-auto">
-                    <select name="carTrim" class="form-select form-select-lg carTrim">
-                        <option value="0">Select Car Trim</option>
+                    <select name="carTrim" size="10" class="form-select form-select-lg carTrim">
                     </select>
                 </div>
             </div>
@@ -177,6 +191,7 @@
     </div>
 
     <hr>
+    <div class="btn btn-lg btn-success back">Back</div>
     <div class="btn btn-lg btn-success proceed">Next</div>
     <div class="btn btn-lg btn-success finish">Finish</div>
 <input type="hidden" name="targetEconomy" id="targetEconomy">

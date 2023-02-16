@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function dash()
     {
         return view('dashboard', [
-            'cols' => Main::cols()
+            'cols' => (new Main())->cols()
         ]);
     }
     public function save(Request $request)
