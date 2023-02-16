@@ -88,7 +88,7 @@ class HomeController extends Controller
         );
 
 
-        $c = Main::cols();
+        $c = (new Main())->cols();
         $cs = array_merge($c['data'], $c['display']);
         $cols = [];
         foreach($cs as $k => $c){
@@ -115,7 +115,6 @@ class HomeController extends Controller
 
             fclose($file);
         };
-        dd($callback());
         return response()->stream($callback, 200, $headers);
     }
 

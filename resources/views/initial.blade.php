@@ -66,7 +66,7 @@
             <div class="theyKnow">
                 <label for="m12">I currently get:</label>
                 <div class="input-group">
-                    <input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""  placeholder="0" aria-label="0">
+                    <input type="number" class="form-control-lg form-control" name="mileage" id="m12" value=""  ">
                     <span class="input-group-text measurementLabel2"></span>
                 </div>
             </div>
@@ -75,14 +75,14 @@
             <div class="theyDontKnow">
                 <label for="m3">Enter the volume of Fuel you used (reading from the pump)</label>
                 <div class="input-group">
-                    <input type="number" class="form-control-lg form-control text-end" name="volumeUsed" id="m4" value=""  placeholder="0" aria-label="0">
+                    <input type="number" class="form-control-lg form-control text-end" name="volumeUsed" id="m4" value="" >
                     <span class="input-group-text measurementLabel3"></span>
                 </div>
             </div>
             <div class="theyDontKnow">
                 <label for="m4">Enter the Distance from your Odometer</label>
                 <div class="input-group">
-                    <input type="number" class="form-control-lg form-control text-end" name="distance" id="m4" value=""  placeholder="0" aria-label="0">
+                    <input type="number" class="form-control-lg form-control text-end" name="distance" id="m4" value="" >
                     <span class="input-group-text measurementLabel"></span>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                 <label for="m5">What is your monthly Fuel (Gas) spending</label>
                 <div class="input-group">
                     <span class="input-group-text">$</span>
-                    <input type="number" class="form-control-lg form-control" name="monthlyFuelSpending" id="m5" value=""  placeholder="0.00" aria-label="0.00">
+                    <input type="number" class="form-control-lg form-control" name="monthlyFuelSpending" id="m5" value="" >
                 </div>
             </div>
 
@@ -104,7 +104,7 @@
             <div class="">
                 <label for="m6">What is your monthly Distance Driven</label>
                 <div class="input-group">
-                    <input type="number" class="form-control-lg form-control" name="monthlyDistance" id="m6" value=""  placeholder="123" aria-label="123">
+                    <input type="number" class="form-control-lg form-control" name="monthlyDistance" id="m6" value="" >
                     <span class="input-group-text measurementLabel"></span>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                 <label for="m7">What is your price for Fuel (Gas)</label>
                 <div class="input-group">
                     <span class="input-group-text ">$</span>
-                    <input type="number" class="form-control-lg form-control" name="fuelPrice" id="m7" value=""  placeholder="3.75" aria-label="3.75">
+                    <input type="number" class="form-control-lg form-control" name="fuelPrice" id="m7" value="" >
                 </div>
             </div>
         </div>

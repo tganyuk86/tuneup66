@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    @if(env('APP_DEBUG'))
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -73,4 +73,5 @@
         </div>
     </div>
 </div>
+    @endif
 </x-app-layout>

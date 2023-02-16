@@ -2,12 +2,12 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 </head>
-<body >
+<body style="font-family: Arial; font-size: 14pt">
 <div >
     <div >
         <div  >
             <div><img src="{{env('APP_URL')}}/logo.png"></div>
-            <div><h2>Fuel Saving Calculator </h2></div>
+            <div><h1>Fuel Saving Calculator </h1></div>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
         <hr>
         <a href="https://tuneup66.com/product/engine-armour-tech/">
         <div><img src="{{env('APP_URL')}}/product.png" height="400px"></div>
-        <div><img src="{{env('APP_URL')}}/buynow.png" height="200px"></div>
+        <div><img src="{{env('APP_URL')}}/buynow.png" height="100px"></div>
         </a>
     </div>
 </div>
