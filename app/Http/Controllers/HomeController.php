@@ -47,6 +47,7 @@ class HomeController extends Controller
             "carYear" => $request["carYear"]??0,
             "carMake" => $request["carMake"]??0,
             "carModel" => $request["carModel"]??0,
+            "carTrim" => $request["carTrim"]??0,
             "firstName" => $request["firstName"]??0,
             "lastName" => $request["lastName"]??0,
             "email" => $request["email"]??0,
