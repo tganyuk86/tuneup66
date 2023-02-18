@@ -123,30 +123,26 @@
             <div class="col-2">
                 <label>Choose Your Car Year</label>
                 <div class="ms-auto">
-                    <select name="carYear" class="form-select form-select-lg carYear" size="10">
-                    </select>
+                    <select name="carYear" class="form-select form-select-lg carYear" size="10"></select>
                 </div>
             </div>
 
             <div class="carMakeContainer col">
                 <label>Choose Your Car Make</label>
                 <div class="ms-auto">
-                    <select name="carMake" size="10" class="form-select form-select-lg carMake">
-                    </select>
+                    <select name="carMake" size="10" class="form-select form-select-lg carMake"></select>
                 </div>
             </div>
             <div class="carModelContainer col">
                 <label>Choose Your Car Model</label>
                 <div class="ms-auto">
-                    <select name="carModel" size="10" class="form-select form-select-lg carModel">
-                    </select>
+                    <select name="carModel" size="10" class="form-select form-select-lg carModel"></select>
                 </div>
             </div>
             <div class="carTrimContainer col">
                 <label>Choose Your Car Trim</label>
                 <div class="ms-auto">
-                    <select name="carTrim" size="10" class="form-select form-select-lg carTrim">
-                    </select>
+                    <select name="carTrim" size="10" class="form-select form-select-lg carTrim"></select>
                 </div>
             </div>
         </div>

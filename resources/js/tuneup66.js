@@ -15,6 +15,7 @@ export function start() {
     $(window).on('keydown', function (e){
         console.log(e.originalEvent)
         if(e.originalEvent.keyCode === 13){
+
             if(currentStep > 3 && validateStep()) {
                 nextStep()
             }
@@ -197,7 +198,11 @@ function clearInvalid() {
 
 function nextStep() {
     hideSteps()
-    currentStep += 1
+    if(currentStep === 7){
+        currentStep = 'end'
+    }else{
+        currentStep += 1
+    }
     showStep(currentStep)
 
 }

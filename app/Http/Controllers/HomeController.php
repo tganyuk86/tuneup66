@@ -106,6 +106,8 @@ class HomeController extends Controller
 
             foreach ($tasks as $task) {
                 $out = [];
+                $task->addCalcs();
+                $task->formatCols();
                 foreach ($cols as $col) {
                     $out[] = $task[$col];
                 }
