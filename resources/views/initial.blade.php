@@ -13,7 +13,7 @@
 
             <div class="py-0 my-0">What the fuel savings calculator cannot do, is to demonstrate the increase in performance and reduction in engine wear that you will enjoy as well.  If you haven't already, please read the testimonials on the site located at <a href="https://tuneup66.com/#testimonials">https://tuneup66.com/#testimonials</a>.</div>
 
-        <div class="py-0 my-0">All you have to do is follow the prompts and answer the questions. The entire experience will take 5 minutes. Let's Get Started!</div>
+        <div class="py-0 my-0">All you have to do is follow the prompts and answer the questions. The entire experience will take 5 minutes. Let's get started!</div>
 
             <div class="text-center">
                 <div class="btn btn-success step0_choice text-white ms-auto" >Click Here To Get Started</div>
@@ -23,7 +23,7 @@
     <div class="step" data-step="1">
         <div class="vstack gap-4">
             <div>Welcome to the TuneUp 66 Fuel Saving Calculator</div>
-            <div>First we have to Determine what Fuel Economy you are already getting</div>
+            <div>First we have to determine what fuel economy you are already getting</div>
             <div>
                 <div class="btn btn-success step1_choice text-white" data-value="0">I don’t know my current fuel economy and I need help calculating</div>
             </div>
@@ -37,7 +37,7 @@
             <div>Welcome to the TuneUp 66 Fuel Saving Calculator</div>
             <div>We can calculate this together</div>
             <div>Step 1</div>
-            <div>Fill up your car/truck/SUV until is VERY full and cannot take anymore in the tank.  Reset your TRIP odometers until it is 0 or write down the exact value of your odometer.</div>
+            <div>Fill up your car/truck/SUV until it is VERY full and cannot take anymore fuel in the tank.  Reset your TRIP odometers until it is 0 or write down the exact value of your odometer.</div>
         </div>
     </div>
     <div class="step" data-step="3">
@@ -45,7 +45,7 @@
 
             <div>Drive your car normally until it is at least 3/4 empty ...get the fuel down as low as you can.</div>
             <div>Step 2</div>
-            <div>Fill up your car/truck/SUV until is VERY full and cannot take anymore in the tank.</div>
+            <div>Fill up your car/truck/SUV until it is VERY full and cannot take anymore fuel in the tank.</div>
 
             <div>Take note of the reading on the pump (how many gallons or litres you filled up with)</div>
 
